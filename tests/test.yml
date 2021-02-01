@@ -1,5 +1,9 @@
 ---
 - hosts: all
   gather_facts: false
-  roles:
-    - helloworld
+  
+  tasks:
+  - name: Install Python3 and Pip
+    win_chocolatey:
+      name: python3
+      state: present
