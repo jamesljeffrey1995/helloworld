@@ -1,5 +1,5 @@
 ---
-- name: Install Python3 and Pip
-  win_chocolatey:
-    name: python3
-    state: present
+- name: Create helloworld file
+  ansible.windows.win_file:
+     path: C:\Users\HelloWorld.txt
+     state: touch
